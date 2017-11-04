@@ -148,7 +148,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="container">
 					<h3>contact us</h3>
 					 <div class="contact-details">
-			 <form>
+			 <form id="contact-form">
 				 <div class="col-md-6 contact-left">
 					 <input type="text" class="text" value="Name *" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name *';}">
 					 <input type="text" class="text" value="Email *" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email *';}">
@@ -187,7 +187,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							*/
 
 							$().UItoTop({ easingType: 'easeOutQuart' });
-
+							$('#container-form').on('submit', function(e) {
+								e.preventDefault()
+								console.log('submitting form')
+							})
 						});
 					</script>
 				<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
